@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* Styling for  App */
+.app-container {
+  width: 90%;
+  margin: auto;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.logo {
+  width: 3rem;
+  height: 3rem;
+  background-color: black;
+  border-radius: 100%;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+nav a {
+  font-size: 1.2rem;
+  color: black;
+  transition: ease 0.3s;
+}
+nav li a:hover {
+  color: lightseagreen;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: lightblue;
+  height: 100vh;
+  width: 250px;
+  padding: 4rem 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 999;
+}
+.sidebar li,
+.sidebar a {
+  width: 100%;
+}
+.Menu-Button {
+  display: none;
+}
+.Menu-Button,
+.Close-Button {
+  font-size: 1.3rem;
+}
+.Close-Button {
+  position: absolute;
+  top: 1rem;
+  left: 13.5rem;
+}
+
+/* Styling for Hero section */
+.title {
+  font-size: 3rem;
+  line-height: 4rem;
+}
+.name-title {
+  font-size: 4rem;
+  font-weight: 600;
+}
+.hero-section {
+  margin: 6rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.hero-section-left {
+  padding: 3rem 0;
+}
+.hero-section-paragraph {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+.hero-section-right {
+  display: flex;
+  justify-content: center;
+}
+.hero-section-right img {
+  width: 50%;
+}
+.about-us-btn {
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 9px;
+  font-size: 1.3rem;
+  color: white;
+  background-color: black;
+}
+
+/* Media Query for Mobile Devices */
+@media (min-width: 280px) and (max-width: 480px) {
+  .logo {
+    width: 2rem;
+    height: 2rem;
+  }
+  .hideonMobile {
+    display: none;
+  }
+  .Menu-Button {
+    display: block;
+  }
+
+  /* Styling for Hero section */
+  .title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    text-align: center;
+  }
+  .name-title {
+    font-size: 2.5rem;
+  }
+  .hero-section {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .hero-section-left {
+    padding: 3rem 0;
+  }
+  .hero-section-paragraph {
+    text-align: center;
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+  .hero-section-right {
+    display: flex;
+    justify-content: center;
+  }
+  .about-us-btn {
+    display: block;
+    margin: auto;
+    padding: 0.7rem 2rem;
+    font-size: 1.2rem;
+  }
+  .hero-section-right img {
+    width: 70%;
+  }
+}
+
+/* Media Query For Tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .name-title {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  .hero-section {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .hero-section-left {
+    padding: 3rem 0;
+  }
+  .hero-section-paragraph {
+    font-size: 1rem;
+    margin: 1.2rem 0;
+  }
+  .hero-section-right img {
+    width: 80%;
+  }
+}
+
+/* Media Query For small screen and Laptop */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .title {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .name-title {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  .hero-section {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .hero-section-left {
+    width: 100%;
+    padding: 3rem 0;
+  }
+  .hero-section-paragraph {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+  .hero-section-right img {
+    width: 65%;
+  }
+}
+
+/* Media Query For Extra Large */
+@media (min-width: 1201px) {
+  .app-container {
+    max-width: 990px;
+    margin: auto;
+  }
+  .title {
+    font-size: 3.1rem;
+    line-height: 4rem;
+  }
+  .name-title {
+    font-size: 4rem;
+    font-weight: 600;
+  }
+  .hero-section {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .hero-section-left {
+    width: 100%;
+    padding: 3rem 0;
+  }
+  .hero-section-paragraph {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+  .hero-section-right img {
+    width: 85%;
+  }
+}
