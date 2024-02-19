@@ -16,6 +16,12 @@ li {
 a {
   text-decoration: none;
 }
+
+:root {
+  --primary-color: black;
+  --secondary-color: white;
+  --link-hover-color: lightseagreen;
+}
 /* Styling for  App */
 .app-container {
   width: 90%;
@@ -26,11 +32,15 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+  background-color: var(--secondary-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 .logo {
   width: 3rem;
   height: 3rem;
-  background-color: black;
+  background-color: var(--primary-color);
   border-radius: 100%;
 }
 nav ul {
@@ -40,17 +50,18 @@ nav ul {
 }
 nav a {
   font-size: 1.2rem;
-  color: black;
+  color: var(--primary-color);
   transition: ease 0.3s;
 }
 nav li a:hover {
-  color: lightseagreen;
+  color: var(--link-hover-color);
 }
 .sidebar {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: lightblue;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   height: 100vh;
   width: 250px;
   padding: 4rem 2rem;
@@ -62,6 +73,7 @@ nav li a:hover {
 .sidebar li,
 .sidebar a {
   width: 100%;
+  color: var(--secondary-color);
 }
 .Menu-Button {
   display: none;
@@ -74,6 +86,52 @@ nav li a:hover {
   position: absolute;
   top: 1rem;
   left: 13.5rem;
+}
+/* DropDown */
+nav ul li {
+  position: relative;
+}
+.dropdown-menu {
+  display: none;
+}
+nav ul li:focus-within .dropdown-menu {
+  display: block;
+  width: 13rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  border-radius: 5px;
+}
+.dropdown-menu ul {
+  display: block;
+  padding: 0 1rem;
+}
+.dropdown-menu ul li {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.nested-dropdown-layout {
+  position: absolute;
+  top: 0;
+  left: 12rem;
+  display: block;
+  width: 20rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.dropdown-menu_1,
+.dropdown-menu_4 {
+  display: none;
+}
+.dropdown-menu ul li:focus-within .dropdown-menu_1,
+.dropdown-menu ul li:focus-within .dropdown-menu_4 {
+  display: block;
 }
 
 /* Styling for Hero section */
@@ -109,8 +167,9 @@ nav li a:hover {
   border: none;
   border-radius: 9px;
   font-size: 1.3rem;
-  color: white;
-  background-color: black;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  cursor: pointer;
 }
 
 /* Media Query for Mobile Devices */
