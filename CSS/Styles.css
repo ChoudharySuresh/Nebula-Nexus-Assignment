@@ -96,7 +96,6 @@ nav ul li {
 }
 nav ul li:focus-within .dropdown-menu {
   display: block;
-  width: 13rem;
   position: absolute;
   top: 100%;
   left: 0;
@@ -107,17 +106,17 @@ nav ul li:focus-within .dropdown-menu {
 }
 .dropdown-menu ul {
   display: block;
-  padding: 0 1rem;
 }
-.dropdown-menu ul li {
-  margin: 1rem 0;
+
+.dropdown-menu ul li a {
+  display: block;
   width: 100%;
 }
 
 .nested-dropdown-layout {
   position: absolute;
   top: 0;
-  left: 12rem;
+  left: 13rem;
   display: block;
   width: 20rem;
   background-color: var(--secondary-color);
@@ -133,7 +132,11 @@ nav ul li:focus-within .dropdown-menu {
 .dropdown-menu ul li:focus-within .dropdown-menu_4 {
   display: block;
 }
-
+.dropdown-icon {
+  float: right;
+  margin-left: 10px;
+  padding-top: 6px;
+}
 /* Styling for Hero section */
 .title {
   font-size: 3rem;
@@ -221,6 +224,26 @@ nav ul li:focus-within .dropdown-menu {
   .hero-section-right img {
     width: 70%;
   }
+  /* Dropdown Menu */
+  .sidebar-dropdown ul {
+    background-color: var(--primary-color);
+    padding: 0 1rem;
+  }
+  .dropdown-menu ul li a {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    width: 100%;
+  }
+  .dropdown-menu ul li {
+    padding: 1rem 0;
+  }
+  .nested-dropdown-layout {
+    background-color: var(--primary-color);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 }
 
 /* Media Query For Tablet */
@@ -247,6 +270,23 @@ nav ul li:focus-within .dropdown-menu {
   }
   .hero-section-right img {
     width: 80%;
+  }
+  /* DropDown */
+  .dropdown-menu {
+    width: 10rem;
+  }
+  .dropdown-menu ul li {
+    padding: 0.5rem 0.5rem;
+  }
+  .dropdown-menu ul li a,
+  .nested-dropdown-layout ul li a {
+    font-size: 0.8rem;
+  }
+  .nested-dropdown-layout {
+    position: absolute;
+    top: 0;
+    left: 10rem;
+    width: 10rem;
   }
 }
 
@@ -275,6 +315,21 @@ nav ul li:focus-within .dropdown-menu {
   }
   .hero-section-right img {
     width: 65%;
+  }
+  /* DropDown */
+  .dropdown-menu {
+    width: 12rem;
+  }
+  .dropdown-menu ul li {
+    padding: 0.6rem;
+  }
+  .dropdown-menu ul li a,
+  .nested-dropdown-layout ul li a {
+    font-size: 1rem;
+  }
+  .nested-dropdown-layout {
+    left: 12rem;
+    width: 12rem;
   }
 }
 
@@ -307,5 +362,16 @@ nav ul li:focus-within .dropdown-menu {
   }
   .hero-section-right img {
     width: 85%;
+  }
+  /* DropDown */
+  .dropdown-menu {
+    width: 13rem;
+  }
+  .dropdown-menu ul li {
+    padding: 0.8rem;
+  }
+  .nested-dropdown-layout {
+    left: 13rem;
+    width: 13rem;
   }
 }
